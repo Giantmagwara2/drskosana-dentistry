@@ -7,7 +7,7 @@ export default function CtaBanner() {
   return (
     <div
       className="banner-with-bg py-20"
-      style={{ backgroundImage: `url('https://ext.same-assets.com/663227978/158497835.jpeg')` }}
+      style={{ backgroundImage: `url('/path/to/your/new-image.jpg')` }}
     >
       <div className="banner-overlay" />
       <div className="container mx-auto px-4 relative z-10">

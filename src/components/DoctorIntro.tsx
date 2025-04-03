@@ -11,7 +11,7 @@ export default function DoctorIntro() {
           <div className="md:w-1/3">
             <div className="heading-primary mb-2 uppercase text-sm tracking-wider font-montserrat">Dental Excellence</div>
             <h2 className="text-3xl font-bold mb-6 text-brand-primary">
-              IS RUN BY DENTIST<br />DR P. SKHOSANA
+              IS RUN BY DENTIST<br />DR. P. SKOSANA
             </h2>
 
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
@@ -25,11 +25,11 @@ export default function DoctorIntro() {
 
           <div className="md:w-2/3">
             <p className="mb-6 text-gray-700 leading-relaxed">
-              With the <strong className="text-brand-primary">Dental Excellence</strong> practice situated in Pretoria, experienced dentist Dr P. Skhosana offers the full range of dentistry services from restorations and oral surgery to orthodontics and cosmetic dentistry. Using the most advanced digital technology and equipment, Dental Excellence aims to give service worth smiling about.
+              At Dental Excellence, Dr. P. Skosana provides comprehensive dental care using advanced technology. From restorations to cosmetic dentistry, each treatment is tailored to ensure the best results for her patients.
             </p>
 
             <p className="mb-6 text-gray-700 leading-relaxed">
-              After completing her dental education and training, Dr. Skhosana has also attended various courses to better her skills and provide a wide range of services for her patients including Zoom Teeth Whitening, Myobrace, CAD/CAM dentistry and other advanced procedures. Using the latest digital dental technology together with the finest quality materials helps her fulfill her passion in delivering exceptional dental care.
+              Dr. Skosana continuously enhances her expertise through specialized training in cutting-edge procedures like Zoom Teeth Whitening, Myobrace, and CAD/CAM dentistry.
             </p>
 
             <p className="mb-8 text-gray-700 leading-relaxed">
