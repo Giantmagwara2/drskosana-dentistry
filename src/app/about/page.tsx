@@ -3,10 +3,23 @@
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import CtaBanner from '@/components/CtaBanner';
+import Head from 'next/head';
 
 export default function AboutPage() {
   return (
     <>
+      {/* SEO Head */}
+      <Head>
+        <title>About Dr. P. Skhosana | Dental Excellence</title>
+        <meta
+          name="description"
+          content="Learn more about Dr. P. Skhosana, her approach to dental care, and the mission of our practice."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:title" content="About Dr. P. Skhosana | Dental Excellence" />
+        <meta property="og:description" content="Discover the journey of Dr. P. Skhosana and her passion for dental care." />
+      </Head>
+
       {/* Page Header */}
       <div className="bg-brand-primary py-16">
         <div className="container mx-auto px-4 text-center">
@@ -25,9 +38,11 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <div className="h-96 bg-gray-200 rounded-lg relative">
-                <div className="absolute inset-0 flex items-center justify-center text-gray-500">
-                  Doctor Profile Image
-                </div>
+                <img
+                  src="/images/dr-skhosana.jpg" // Replace with your actual image path
+                  alt="Dr. P. Skhosana"
+                  className="absolute inset-0 object-cover w-full h-full rounded-lg"
+                />
               </div>
             </div>
             <div>
