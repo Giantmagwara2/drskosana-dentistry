@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export', // Enables static export for deployment to platforms like GitHub Pages, Vercel, etc.
-  distDir: 'build', // Specifies the output directory for the static build files.
+  distDir: 'out', // Specifies the output directory for the static build files.
   images: {
     remotePatterns: [
       {

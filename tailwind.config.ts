@@ -75,6 +75,11 @@ const config: Config = {
           800: '#27272a',
           900: '#18181b',
         },
+
+        // Dark Mode Colors
+        "dark-background": "#121212",     // Dark mode background
+        "dark-text": "#e0e0e0",           // Dark mode text
+        "dark-border": "#333333",         // Dark mode border
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -103,7 +108,9 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")], // Adds support for utility-based animations
+  plugins: [
+    require("tailwindcss-animate"), // Adds support for utility-based animations
+  ],
 };
 
 export default config;
