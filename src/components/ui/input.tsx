@@ -1,44 +1,22 @@
-import * as React from "react";
-import { cn } from "@/lib/utils";
+import * as React from "react"
 
-// Define input variants for flexible customization
-const inputVariants = {
-  sizes: {
-    sm: "h-8 px-2 py-1 text-sm",
-    md: "h-9 px-3 py-1 text-base",
-    lg: "h-10 px-4 py-2 text-lg",
-  },
-  colors: {
-    primary: "border-primary focus-visible:ring-primary",
-    secondary: "border-secondary focus-visible:ring-secondary",
-    neutral: "border-neutral focus-visible:ring-neutral",
-    accent: "border-accent focus-visible:ring-accent",
-  },
-  states: {
-    disabled: "cursor-not-allowed opacity-50",
-    focused: "focus-visible:ring-2 focus-visible:ring-offset-2",
-  },
-};
+import { cn } from "@/lib/utils"
 
-const Input = React.forwardRef<HTMLInputElement, React.ComponentProps<"input"> & { size?: keyof typeof inputVariants.sizes; color?: keyof typeof inputVariants.colors; state?: keyof typeof inputVariants.states }>(
-  ({ className, type, size = "md", color = "neutral", state = "focused", ...props }, ref) => {
+const Input = React.forwardRef<HTMLInputElement, React.ComponentProps<"input">>(
+  ({ className, type, ...props }, ref) => {
     return (
       <input
         type={type}
         className={cn(
-          "flex w-full rounded-md border bg-transparent shadow-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none disabled:opacity-50",
-          inputVariants.sizes[size],
-          inputVariants.colors[color],
-          inputVariants.states[state],
+          "flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
           className
         )}
         ref={ref}
         {...props}
       />
-    );
+    )
   }
-);
+)
+Input.displayName = "Input"
 
-Input.displayName = "Input";
-
-export { Input };
+export { Input }

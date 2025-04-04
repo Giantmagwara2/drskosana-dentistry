@@ -90,21 +90,21 @@ export default function ServicesGrid() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {services.map((service) => (
             <Link key={service.id} href={service.href}>
-              <a>
-                <div className="service-card rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105 hover:shadow-xl">
-                  <div className="relative h-56">
-                    <img
-                      src={service.image}
-                      alt={service.title}
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="service-card-overlay absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white">
+              <div className="service-card rounded-lg overflow-hidden shadow-md">
+                <div className="relative h-56">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="service-card-overlay">
+                    <div className="text-white text-center">
                       <span className="uppercase font-montserrat text-sm">View Service</span>
                     </div>
                   </div>
-                  <div className="service-title text-center py-4 font-bold text-lg">{service.title}</div>
+                  <div className="service-title">{service.title}</div>
                 </div>
-              </a>
+              </div>
             </Link>
           ))}
         </div>

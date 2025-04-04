@@ -18,15 +18,9 @@ export default function Footer() {
                 <Logo variant="light" showTagline={true} />
               </div>
               <div className="space-y-4">
-                <a href="tel:+27835406225" className="contact-info">
+                <a href="tel:+27123456789" className="contact-info">
                   <Phone size={20} />
-                  <span>+27 83 540 6225</span>
-                </a>
-                <a 
-                  href="https://wa.me/27835406225" 
-                  target="_blank" 
-                  className="contact-info text-green-500 hover:text-green-600">
-                  <span>WhatsApp Us</span>
+                  <span>+27 12 345 6789</span>
                 </a>
                 <div className="contact-info">
                   <Mail size={20} />
@@ -34,7 +28,7 @@ export default function Footer() {
                 </div>
                 <div className="contact-info">
                   <MapPin size={20} />
-                  <span>Office No 211, Upperground KaMkholo Building, Brown St, Mbombela, 1200</span>
+                  <span>123 Dental Plaza, Pretoria, South Africa</span>
                 </div>
               </div>
             </div>
@@ -76,29 +70,25 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Location and Credentials */}
+            {/* Opening Hours */}
             <div>
-              <h3 className="text-xl font-bold mb-6 font-playfair">Dr. P.I. Skosana Credentials</h3>
+              <h3 className="text-xl font-bold mb-6 font-playfair">Opening Hours</h3>
               <div className="space-y-2">
-                <div className="font-semibold">Practice # 0157465</div>
-                <div className="font-semibold">HPC SA Nr.0082 325</div>
-                <div className="font-semibold">BDS (MEDUNSA)</div>
-                <div className="font-semibold">Dip Ortho (UWC)</div>
-              </div>
-
-              <h3 className="text-xl font-bold mt-6 mb-4 font-playfair">Locations</h3>
-              <div className="space-y-4">
-                <div className="contact-info">
-                  <MapPin size={20} />
-                  <span>Office No 211, Upperground KaMkholo Building, Brown St, Mbombela, 1200</span>
+                <div className="flex justify-between">
+                  <span>Monday - Wednesday, Friday</span>
+                  <span>08:30 - 17:00</span>
                 </div>
-                <div className="contact-info">
-                  <MapPin size={20} />
-                  <span>Shop 4 Kelly Complex, Kabokweni Road, Kabokweni, 1245, Mbombela</span>
+                <div className="flex justify-between">
+                  <span>Thursday</span>
+                  <span>08:30 - 12:30</span>
                 </div>
-                <div className="contact-info">
-                  <MapPin size={20} />
-                  <span>Qedusizi Medical Centre, Msogwaba Main Road, Msogwaba, Mbombela</span>
+                <div className="flex justify-between">
+                  <span>Saturday</span>
+                  <span>08:00 - 13:00</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Sunday</span>
+                  <span>CLOSED</span>
                 </div>
               </div>
             </div>
@@ -109,7 +99,7 @@ export default function Footer() {
       {/* Copyright Bar */}
       <div className="bg-brand-primary bg-opacity-90 py-4 text-white text-center text-sm">
         <div className="container mx-auto px-4">
-          <p>&copy; {currentYear} Dr. P.I. Skosana. All rights reserved.</p>
+          <p>&copy; {currentYear} Dr. P. Skhosana. All rights reserved.</p>
           <div className="mt-2 space-x-4">
             <Link href="/privacy-policy" className="hover:text-brand-accent transition-colors">
               Privacy Policy

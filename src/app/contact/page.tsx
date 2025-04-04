@@ -5,25 +5,11 @@ import { Card } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
-import Link from 'next/link';
 
 export default function ContactPage() {
   return (
     <>
-      <nav className="bg-brand-primary py-4">
-        <div className="container mx-auto px-4">
-          <ul className="flex space-x-8 justify-center">
-            <li><Link href="/" className="text-white hover:text-brand-light">Home</Link></li>
-            <li><Link href="/about" className="text-white hover:text-brand-light">About</Link></li>
-            <li><Link href="/services" className="text-white hover:text-brand-light">Services</Link></li>
-            <li><Link href="/testimonials" className="text-white hover:text-brand-light">Testimonials</Link></li>
-            <li><Link href="/gallery" className="text-white hover:text-brand-light">Gallery</Link></li>
-            <li><Link href="/technology" className="text-white hover:text-brand-light">Technology</Link></li>
-            <li><Link href="/contact" className="text-white hover:text-brand-light">Contact</Link></li>
-          </ul>
-        </div>
-      </nav>
-
+      {/* Page Header */}
       <div className="bg-brand-primary py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -35,9 +21,11 @@ export default function ContactPage() {
         </div>
       </div>
 
+      {/* Contact Information & Form */}
       <div className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Contact Information */}
             <div>
               <h2 className="text-3xl font-bold text-brand-primary mb-8">
                 Get In Touch
@@ -50,7 +38,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-brand-primary mb-1">Phone</h3>
-                    <p className="text-gray-600 mb-1">013 752 2757</p>
+                    <p className="text-gray-600 mb-1">+27 12 345 6789</p>
                     <p className="text-gray-500 text-sm">Call us during business hours</p>
                   </div>
                 </div>
@@ -61,7 +49,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-brand-primary mb-1">Email</h3>
-                    <p className="text-gray-600 mb-1">info@drskosana.co.za</p>
+                    <p className="text-gray-600 mb-1">info@drskhosana.co.za</p>
                     <p className="text-gray-500 text-sm">We'll respond as soon as possible</p>
                   </div>
                 </div>
@@ -94,6 +82,7 @@ export default function ContactPage() {
               </div>
             </div>
 
+            {/* Contact Form */}
             <div>
               <Card className="p-8 shadow-lg">
                 <h2 className="text-2xl font-bold text-brand-primary mb-6">
@@ -164,6 +153,7 @@ export default function ContactPage() {
         </div>
       </div>
 
+      {/* Map Section */}
       <div className="py-16 bg-brand-light">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
