@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
+    "target": "ES2022", // Updated from ES2017 to ES2022 for better compatibility with modern JavaScript features.
     "lib": [
       "dom",
       "dom.iterable",
@@ -12,7 +12,7 @@
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "bundler", // Ensures compatibility with modern bundlers like Vite or Webpack.
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -23,10 +23,13 @@
       }
     ],
     "paths": {
-      "@/*": [
-        "./src/*"
-      ]
-    }
+      "@/*": ["./src/*"], // Updated alias to point to `src` instead of `app`, as `src` is more conventional.
+      "@components/*": ["./src/components/*"],
+      "@lib/*": ["./src/lib/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@assets/*": ["./src/assets/*"]
+    },
+    "baseUrl": "." // Added `baseUrl` to resolve paths correctly.
   },
   "include": [
     "**/*.ts",
@@ -36,6 +39,9 @@
     "build/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "dist", // Added `dist` to exclude compiled output files.
+    ".next", // Exclude `.next` directory to avoid unnecessary type checking.
+    "build" // Exclude `build` directory if it exists.
   ]
 }

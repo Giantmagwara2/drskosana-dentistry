@@ -9,25 +9,25 @@ import Link from 'next/link';
 const testimonials = [
   {
     id: 1,
-    quote: "I've always been anxious about dental visits, but Dr. Skhosana and her team made me feel completely at ease. The care was gentle, thorough, and professional. I'm actually looking forward to my next check-up!",
+    quote: "I've always been anxious about dental visits, but Dr. Skosana and her team made me feel completely at ease. The care was gentle, thorough, and professional. I'm actually looking forward to my next check-up!",
     author: "John Mokoena",
     image: "https://randomuser.me/api/portraits/men/32.jpg"
   },
   {
     id: 2,
-    quote: "My kids ENJOY going to the Dentist...weird I know...thanks to this practice. Dr. Skhosana is wonderful with children. The entire team is warm, lovely and works with you to find a time that suits your schedule.",
+    quote: "My kids ENJOY going to the Dentist...weird I know...thanks to this practice. Dr. Skosana is wonderful with children. The entire team is warm, lovely and works with you to find a time that suits your schedule.",
     author: "Sarah Naidoo",
     image: "https://randomuser.me/api/portraits/women/44.jpg"
   },
   {
     id: 3,
-    quote: "The dental implants I received from Dr. Skhosana have completely transformed my smile and my confidence. The procedure was explained clearly, and the results are amazing. I can't thank the team enough!",
+    quote: "The dental implants I received from Dr. Skosana have completely transformed my smile and my confidence. The procedure was explained clearly, and the results are amazing. I can't thank the team enough!",
     author: "David Mbeki",
     image: "https://randomuser.me/api/portraits/men/62.jpg"
   },
   {
     id: 4,
-    quote: "I had an emergency with a broken tooth and Dr. Skhosana's practice fit me in immediately. The repair is flawless and you can't tell the difference between the fixed tooth and my natural ones. Excellent service!",
+    quote: "I had an emergency with a broken tooth and Dr. Skosana's practice fit me in immediately. The repair is flawless and you can't tell the difference between the fixed tooth and my natural ones. Excellent service!",
     author: "Priya Govender",
     image: "https://randomuser.me/api/portraits/women/28.jpg"
   }
