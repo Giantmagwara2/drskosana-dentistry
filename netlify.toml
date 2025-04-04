@@ -19,8 +19,16 @@
   for = "/*"
     [headers.values]
     Access-Control-Allow-Origin = "*"
+    # Add specific headers for security or cache control as necessary
+    # Access-Control-Allow-Methods = "GET, POST, PUT, DELETE"
+    # Cache-Control = "public, max-age=31536000, immutable"
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+  # Consider adding more redirects if specific routes need to be mapped
+  # Example:
+  # from = "/old-path/*"
+  # to = "/new-path/:splat"
+  # status = 301

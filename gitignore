@@ -32,6 +32,7 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.local # Optionally add if you plan to commit your local environment file
 
 # vercel
 .vercel
@@ -39,3 +40,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# ignore lock files for yarn & npm if not committing them
+yarn.lock
+package-lock.json
+
+# macOS specific
+*.swp
+
+# VSCode settings
+.vscode/
