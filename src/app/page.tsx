@@ -1,12 +1,8 @@
-import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import Hero from '@/components/Hero';
 import DoctorIntro from '@/components/DoctorIntro';
 import ServicesGrid from '@/components/ServicesGrid';
-
-// Lazy load non-critical components
-const Testimonials = dynamic(() => import('@/components/Testimonials'), { ssr: false });
-const CtaBanner = dynamic(() => import('@/components/CtaBanner'), { ssr: false });
+import ClientComponents from '@/components/ClientComponents'; // Import the new Client Component
 
 export default function Home() {
   return (
@@ -34,11 +30,8 @@ export default function Home() {
         {/* Services Grid */}
         <ServicesGrid />
 
-        {/* Testimonials */}
-        <Testimonials />
-
-        {/* Call-to-Action Banner */}
-        <CtaBanner />
+        {/* Client Components (Testimonials and CTA Banner) */}
+        <ClientComponents />
       </main>
     </>
   );
