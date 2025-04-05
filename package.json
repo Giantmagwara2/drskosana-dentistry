@@ -19,7 +19,7 @@
     "clsx": "^2.1.1",
     "lucide-react": "^0.475.0",
     "next": "^15.2.0",
-    "next-themes": "^0.2.1", // Added next-themes dependency
+    "next-themes": "^0.2.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.55.0",
@@ -29,14 +29,14 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
+    "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
     "eslint": "^9",
-    "eslint-config-next": "15.2.0",
+    "eslint-config-next": "15.1.7",
     "husky": "^8.0.3",
     "postcss": "^8",
-    "prettier": "^3.0.0",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }
