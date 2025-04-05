@@ -26,8 +26,8 @@
     "tailwind-merge": "^3.0.1",
     "tailwindcss-animate": "^1.0.7",
     "zod": "^3.24.2",
-    "@formatjs/intl-localematcher": "^2.0.0", // Added missing dependency
-    "negotiator": "^0.6.3" // Added missing dependency
+    "@formatjs/intl-localematcher": "^2.0.0",
+    "negotiator": "^0.6.3"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
