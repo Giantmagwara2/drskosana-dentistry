@@ -11,9 +11,9 @@
   publish = "out" # Updated to match Next.js static export directory
 
 [build.environment]
-  NETLIFY_NEXT_PLUGIN_SKIP = "true"
-  NODE_VERSION = "18"
-  NPM_FLAGS = "--legacy-peer-deps" # Added to handle peer dependency issues
+  NODE_VERSION = "18.20.8"
+  NPM_VERSION = "10.8.2"
+  NPM_FLAGS = "--legacy-peer-deps"
   HUSKY = "0" # Disable husky if not required during builds
 
 [functions]
