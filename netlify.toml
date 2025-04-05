@@ -16,6 +16,9 @@
   NPM_FLAGS = "--legacy-peer-deps"
   HUSKY = "0" # Disable husky if not required during builds
 
+[build.cache]
+  paths = ["node_modules", ".next/cache"]
+  
 [functions]
   node_bundler = "esbuild"
 
