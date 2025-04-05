@@ -1,12 +1,14 @@
 /** @type {import('postcss-load-config').Config} */
-const config = {
+import tailwindcss from 'tailwindcss'; // Replace `require` with `import`
+import autoprefixer from 'autoprefixer';
+import cssnano from 'cssnano'; // Import cssnano for minification
+
+export default {
   plugins: [
-    require('tailwindcss'), // Processes Tailwind CSS classes and utilities
-    require('autoprefixer'), // Adds vendor prefixes for better cross-browser compatibility
+    tailwindcss,
+    autoprefixer,
     ...(process.env.NODE_ENV === 'production'
-      ? [require('cssnano')({ preset: 'default' })] // Minifies CSS in production builds
+      ? [cssnano({ preset: 'default' })] // Use imported cssnano
       : []),
   ],
 };
-
-export default config;
