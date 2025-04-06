@@ -7,7 +7,7 @@
   ]
 
 [build]
-  command = "npm install && npm run build" # Switched from 'bun run build' to 'npm run build'
+  command = "npm ci && npm run build" # Switched from 'bun run build' to 'npm run build'
   publish = "out" # Updated to match Next.js static export directory
 
 [build.environment]
