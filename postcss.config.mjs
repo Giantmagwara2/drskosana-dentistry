@@ -1,14 +1,14 @@
 /** @type {import('postcss-load-config').Config} */
-import tailwindcss from 'tailwindcss'; // Replace `require` with `import`
+import tailwindcss from 'tailwindcss';
 import autoprefixer from 'autoprefixer';
-import cssnano from 'cssnano'; // Import cssnano for minification
+import cssnano from 'cssnano';
 
 export default {
   plugins: [
     tailwindcss,
     autoprefixer,
     ...(process.env.NODE_ENV === 'production'
-      ? [cssnano({ preset: 'default' })] // Use imported cssnano
+      ? [cssnano({ preset: 'default' })]
       : []),
   ],
 };
