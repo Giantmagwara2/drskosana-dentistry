@@ -40,6 +40,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+[tsconfig.tsbuildinfo](http://_vscodecontentref_/4)
 
 # ignore lock files for yarn & npm if not committing them
 

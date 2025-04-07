@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Phone, Mail, MapPin, Clock } from 'lucide-react';
-import Link from 'next/link';
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import Link from "next/link";
 
 export default function ContactPage() {
   return (
@@ -15,13 +15,13 @@ export default function ContactPage() {
         <div className="container mx-auto px-4">
           <ul className="flex space-x-8 justify-center">
             {[
-              { name: 'Home', href: '/' },
-              { name: 'About', href: '/about' },
-              { name: 'Services', href: '/services' },
-              { name: 'Testimonials', href: '/testimonials' },
-              { name: 'Gallery', href: '/gallery' },
-              { name: 'Technology', href: '/technology' },
-              { name: 'Contact', href: '/contact' },
+              { name: "Home", href: "/" },
+              { name: "About", href: "/about" },
+              { name: "Services", href: "/services" },
+              { name: "Testimonials", href: "/testimonials" },
+              { name: "Gallery", href: "/gallery" },
+              { name: "Technology", href: "/technology" },
+              { name: "Contact", href: "/contact" },
             ].map((link) => (
               <li key={link.name}>
                 <Link
@@ -44,7 +44,8 @@ export default function ContactPage() {
             Contact Us
           </h1>
           <p className="text-white/80 max-w-3xl mx-auto">
-            We'd love to hear from you. Contact us for appointments, inquiries, or any questions you might have.
+            We'd love to hear from you. Contact us for appointments, inquiries,
+            or any questions you might have.
           </p>
         </div>
       </div>
@@ -63,34 +64,44 @@ export default function ContactPage() {
                 {[
                   {
                     icon: <Phone size={24} />,
-                    title: 'Phone',
-                    details: ['013 752 2757', 'Call us during business hours'],
+                    title: "Phone",
+                    details: ["013 752 2757", "Call us during business hours"],
                   },
                   {
                     icon: <Mail size={24} />,
-                    title: 'Email',
-                    details: ['info@drskosana.co.za', "We'll respond as soon as possible"],
+                    title: "Email",
+                    details: [
+                      "info@drskosana.co.za",
+                      "We'll respond as soon as possible",
+                    ],
                   },
                   {
                     icon: <MapPin size={24} />,
-                    title: 'Location',
-                    details: ['123 Dental Plaza, Pretoria, South Africa', 'Easily accessible with ample parking'],
+                    title: "Location",
+                    details: [
+                      "123 Dental Plaza, Pretoria, South Africa",
+                      "Easily accessible with ample parking",
+                    ],
                   },
                   {
                     icon: <Clock size={24} />,
-                    title: 'Hours',
+                    title: "Hours",
                     details: [
-                      'Monday - Wednesday, Friday: 08:30 - 17:00',
-                      'Thursday: 08:30 - 12:30',
-                      'Saturday: 08:00 - 13:00',
-                      'Sunday: Closed',
+                      "Monday - Wednesday, Friday: 08:30 - 17:00",
+                      "Thursday: 08:30 - 12:30",
+                      "Saturday: 08:00 - 13:00",
+                      "Sunday: Closed",
                     ],
                   },
                 ].map((item, index) => (
                   <div key={index} className="flex items-start space-x-4">
-                    <div className="bg-brand-primary rounded-full p-3 text-white">{item.icon}</div>
+                    <div className="bg-brand-primary rounded-full p-3 text-white">
+                      {item.icon}
+                    </div>
                     <div>
-                      <h3 className="text-xl font-bold text-brand-primary mb-1">{item.title}</h3>
+                      <h3 className="text-xl font-bold text-brand-primary mb-1">
+                        {item.title}
+                      </h3>
                       <p className="text-gray-600 mb-1">{item.details[0]}</p>
                       <p className="text-gray-500 text-sm">{item.details[1]}</p>
                     </div>
@@ -186,7 +197,8 @@ export default function ContactPage() {
               Find Us
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              We're conveniently located in Pretoria, with easy access and ample parking.
+              We're conveniently located in Pretoria, with easy access and ample
+              parking.
             </p>
           </div>
 
@@ -195,11 +207,14 @@ export default function ContactPage() {
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.659569647523!2d28.20119337538037!3d-25.75601698740931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e955c6b4f8a6b5b%3A0x7b7b7b7b7b7b7b7b!2s123%20Dental%20Plaza%2C%20Pretoria!5e0!3m2!1sen!2sza!4v1635456789012"
               width="100%"
               height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
+              className="iframe-style"
               loading="lazy"
+              onLoad={() => {
+                if (!("loading" in HTMLIFrameElement.prototype)) {
+                  // Fallback logic for older browsers
+                }
+              }}
               referrerPolicy="no-referrer-when-downgrade"
-              className="absolute inset-0"
               title="Google Maps Location"
             ></iframe>
           </div>
