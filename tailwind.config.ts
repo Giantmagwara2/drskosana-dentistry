@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  darkMode: ["class"], // Enable dark mode via class
+  darkMode: "class", // Enable dark mode via class
   content: [
     "./src/**/*.{ts,tsx}", // Include all files in the `src` directory
     "./app/**/*.{ts,tsx}", // Include files in the `app` directory (for Next.js 13+)
@@ -103,11 +103,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [
-    require("tailwindcss-animate"),
-    require("@tailwindcss/forms"),
-    require("@tailwindcss/typography"),
-  ],
 };
 
 export default config;
