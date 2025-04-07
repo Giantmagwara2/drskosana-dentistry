@@ -7,19 +7,17 @@
   ]
 
 [build]
-  command = "npm ci && npm run build" # Switched from 'bun run build' to 'npm run build'
-  publish = "out" # Updated to match Next.js static export directory
-  command = "npm cache clean --force && npm install && npm run build"
+  command = "yarn install && yarn build" # Updated to use Yarn
+  publish = "out" # Matches Next.js static export directory
 
 [build.environment]
   NODE_VERSION = "18.20.8"
-  NPM_VERSION = "10.8.2"
-  NPM_FLAGS = "--legacy-peer-deps"
-  HUSKY = "0" # Disable husky if not required during builds
+  YARN_VERSION = "1.22.19" # Specify the Yarn version if needed
+  HUSKY = "0" # Disable husky during builds if not required
 
 [build.cache]
   paths = ["node_modules", ".next/cache"]
-  
+
 [functions]
   node_bundler = "esbuild"
 
@@ -30,17 +28,9 @@
   for = "/*"
     [headers.values]
     Access-Control-Allow-Origin = "*"
-    # Uncomment and customize additional headers if needed
-    # Access-Control-Allow-Methods = "GET, POST, PUT, DELETE"
-    # Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=31536000, immutable" # Added caching for better performance
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-  # Add more redirects if necessary
-  # Example:
-  # [[redirects]]
-  #   from = "/old-path/*"
-  #   to = "/new-path/:splat"
-  #   status = 301
