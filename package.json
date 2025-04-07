@@ -10,7 +10,8 @@
     "format": "prettier --write .",
     "prepare": "husky install",
     "analyze": "ANALYZE=true next build",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "build:css": "tailwindcss -i ./src/app/globals.css -o ./src/styles/output.css --minify"
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.6.1",
