@@ -1,24 +1,16 @@
-/* Import Fonts */
+/* ─── Import Fonts ─────────────────────────────────────────────────── */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 
-/* Tailwind CSS Layers */
+/* ─── Tailwind CSS Layers ──────────────────────────────────────────── */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Define the missing border-border class */
-@layer utilities {
-  .border-border {
-    border-color: hsl(var(--border)); /* Use the CSS variable for consistency */
-  }
-}
-
-/* Base Variables and Dark Mode */
+/* ─── CSS Variables ────────────────────────────────────────────────── */
 @layer base {
   :root {
-    /* Light Mode Colors */
     --background: 210 33% 96%;
     --foreground: 222 47% 11%;
     --card: 0 0% 100%;
@@ -42,7 +34,6 @@
   }
 
   .dark {
-    /* Dark Mode Colors */
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
     --card: 222.2 84% 4.9%;
@@ -63,12 +54,9 @@
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
   }
-}
 
-/* Global Styles */
-@layer base {
   * {
-    border-color: hsl(var(--border)); /* Use the CSS variable directly */
+    border-color: hsl(var(--border));
   }
 
   body {
@@ -76,7 +64,14 @@
   }
 }
 
-/* Custom Font Classes */
+/* ─── Utilities ────────────────────────────────────────────────────── */
+@layer utilities {
+  .border-border {
+    border-color: hsl(var(--border));
+  }
+}
+
+/* ─── Font Classes ─────────────────────────────────────────────────── */
 .font-montserrat {
   font-family: "Montserrat", sans-serif;
 }
@@ -89,7 +84,7 @@
   font-family: "Lobster", cursive;
 }
 
-/* Button Styles */
+/* ─── Button Styles ────────────────────────────────────────────────── */
 .btn-primary {
   @apply bg-brand-primary text-white hover:bg-brand-primary/90 transition-colors;
 }
@@ -98,7 +93,7 @@
   @apply bg-brand-secondary text-white hover:bg-brand-secondary/90 transition-colors;
 }
 
-/* Heading Styles */
+/* ─── Headings ─────────────────────────────────────────────────────── */
 h1,
 h2,
 h3,
@@ -116,7 +111,7 @@ h6 {
   @apply text-brand-secondary font-bold;
 }
 
-/* Service Card Styles */
+/* ─── Service Card ─────────────────────────────────────────────────── */
 .service-card {
   @apply relative overflow-hidden rounded-lg shadow-md transition-transform hover:scale-105;
 }
@@ -129,12 +124,12 @@ h6 {
   @apply text-center text-white font-bold py-3 bg-brand-primary;
 }
 
-/* Smile Quote Styles */
+/* ─── Smile Quote ──────────────────────────────────────────────────── */
 .smile-quote {
   @apply font-lobster text-brand-accent italic;
 }
 
-/* Banner with Background Image */
+/* ─── Banner Section ───────────────────────────────────────────────── */
 .banner-with-bg {
   @apply relative bg-cover bg-center py-20;
 }
@@ -147,7 +142,7 @@ h6 {
   @apply absolute inset-0 bg-black/40;
 }
 
-/* Contact Info Styles */
+/* ─── Contact Info ─────────────────────────────────────────────────── */
 .contact-info {
   @apply flex items-center gap-2 text-white/90 hover:text-white transition-colors;
 }
